@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+<!-- jQuery (cần thiết để Slick hoạt động) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Slick JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
 </head>
 <body>
     <header class="header">
@@ -15,7 +25,7 @@
             <ul>
                 <li class="active"><a href="main.html">Trang Chủ</a></li>
                 <li><a href="#">Lĩnh Vực</a></li>
-                <li><a href="#">Về Chúng Tôi</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
                 <li><a href="#">Sản Phẩm</a></li>
                 <li><a href="#">Tin Tức</a></li>
                 <li><a href="#">Liên Hệ</a></li>
@@ -27,7 +37,8 @@
         <div class="grid-container">
             <div class="content">
                 <img src="/img/BannerMain.png" alt="Banner chính">
-                <p>Giải pháp toàn diện <br> cho một tương lai bền vững</p>
+                <p>Giải pháp toàn diện</p>
+                <p>Cho một tương lai bền vững</p>
                 <button>Xem thêm</button>
             </div>
             <div class="video-container">
@@ -63,35 +74,46 @@
             <img src="/img/gallery/tu1.png" alt="">
             <img src="/img/gallery/vlxd.png" alt="">
             <img src="/img/gallery/vlxd1.png" alt="">
-
-                <!-- lặp ảnh-->
-            <img src="/img/gallery/airPurifier.png" alt="">
-            <img src="/img/gallery/airPurifier1.png" alt="">
-            <img src="/img/gallery/ban.png" alt="">
-            <img src="/img/gallery/ban1.png" alt="">
-            <img src="/img/gallery/denNlmt.jpg" alt="">
-            <img src="/img/gallery/denNlmt1.jpg" alt="">
-            <img src="/img/gallery/giuongNgu.png" alt="">
-            <img src="/img/gallery/giuongNgu1.png" alt="">
-            <img src="/img/gallery/ho.png" alt="">
-            <img src="/img/gallery/ho1.png" alt="">
-            <img src="/img/gallery/invester.png" alt="">
-            <img src="/img/gallery/invester1.png" alt="">
-            <img src="/img/gallery/maybom.png" alt="">
-            <img src="/img/gallery/maybom1.png" alt="">
-            <img src="/img/gallery/nhomCN.jpg" alt="">
-            <img src="/img/gallery/nhomCN1.png" alt="">
-            <img src="/img/gallery/nhomCN2.png" alt="">
-            <img src="/img/gallery/nhomCN3.png" alt="">
-            <img src="/img/gallery/quat.png" alt="">
-            <img src="/img/gallery/sofa.png" alt="">
-            <img src="/img/gallery/sofa1.png" alt="">
-            <img src="/img/gallery/tu.png" alt="">
-            <img src="/img/gallery/tu1.png" alt="">
-            <img src="/img/gallery/vlxd.png" alt="">
-            <img src="/img/gallery/vlxd1.png" alt="">
-
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            $('.gallery').slick({
+                slidesToShow: 5,  // Số ảnh hiển thị cùng lúc
+                slidesToScroll: 5,
+                autoplay: true,
+                autoplaySpeed: 4000, // Tốc độ chạy (ms)
+                arrows: false, // Ẩn nút điều hướng
+                dots: false, // Ẩn chấm điều hướng
+                infinite: true, // Lặp vô hạn
+                speed: 3000, // Tốc độ chuyển đổi slide
+                pauseOnHover: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+        
 </body>
 </html>
